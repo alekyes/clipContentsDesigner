@@ -4,59 +4,54 @@
 *	Загрузить [стабильную версию][1]
 *	Загрузить [разрабатываемую версию][2]
 
-This add-on is used to add text to the clipboard, which can be useful when
-you want to join sections of text together ready for pasting.  The clipboard
-content can also be cleared.
+Это дополнение используется для добавления текста в буфер обмена, которое может быть полезно,
+если вы хотите соединять секции текста для вставки.
+Буфер обмена также может быть очищен.
 
-## Команды клавиш ##
-*	NVDA+windows+c: Add selected text, Unicode braille characters which
-  represent MathML objects, or the string which has been marked with the
-  review cursor, to the clipboard.
+## Команды клавиатуры ##
+*	NVDA+windows+c: Добавить выделенный текст, символы Unicode шрифтом Брайля, которые представляют собой объекты MathML или строка, которая была отмечена с курсором обзора в буфер обмена.
 *	NVDA+windows+x: Очистить содержимое буфера обмена.
-*	NVDA+windows+f9: Mark the current position of the review cursor as the start of the text to be added to the clipboard.
-    If you use nvda+F9, the text will not be added.
+*	NVDA+windows+f9: Отмечает текущее положение курсора обзора как начало текста, который будет добавлен в буфер обмена. Если вы используете nvda+F9, текст не будет добавлен.
+*	Не установлено: Копировать в буфер обмена, с возможностью предварительного подтверждения.
 
-Примечание: Эти команды могут быть изменены в меню NVDA, подменю Параметры,
-диалог Жесты ввода, категория просмотр текста.
+Примечание: Эти команды могут быть изменены в меню NVDA, подменю Параметры, диалог Жесты ввода, категория просмотр текста.
 
 ## Меню Настроек ##
-*	Clip Contents Designer settings: Allows to set a separator which can be used to find the text segments once the entire added text is pasted.
-It's also possible to choose if the added text will be appended or prepended.
+*	Настройки Clip Contents Designer: позволяет установить разделитель, который может быть использован, чтобы найти сегменты текста после того, как весь добавленный текст будет вставлен.
+Кроме того, можно выбрать, если добавленный текст будет добавлен или вырезан, если доступны действия (добавление, очистка буфера обмена, копировать и вырезать), которые должны быть выполнены после подтверждения, и если подтверждение будет предложено только если текст содержится в буфере обмена.
 
-Note: The above command can be changed from NVDA menu, Preferences submenu,
-Input gestures dialog, Configuration category.
+Примечания:
 
-## Изменения для 5.0 ##
+*	Эта команда может быть изменена в меню NVDA, подменю Параметры, диалог Жесты ввода, категория Конфигурация.
+*	Когда окно NVDA с сообщением еще открыто, подтверждения не будет запрашиваться. В тех случаях, действия будут выполнены немедленно
 
-*	The visual presentation of the dialog has been enhanced, adhering to the
-  appearance of the dialogs shown in NVDA.
-*	Requires NVDA 2016.4 or later.
+## Изменения в версии 6.0
 
-## Изменения для 4.0 ##
-*	Add-on settings are managed from NVDA configuration, so that standard
-  profiles can be used to save different separators, and it's not needed to
-  copy the settings for importing at reinstallation.
-*	Now it's possible to choose if the added text will be appended or
-  prepended, using the Add text before clip data check box from the Clip
-  Contents Designer settings dialog.
+*	Добавлены опции для выбора, если доступные действия должны быть выполнены после подтверждения.
+*	Добавлены команды эмуляции копирования и вырезания, которые могут быть назначены в диалоге жесты ввода.
+*	Добавлен диалог при установке настройки эмуляции копирования и вырезания. Это позволяет добавить команды control+c и control+x для копирования и вырезания, и запрос, если вы хотите заменить содержимое буфера обмена при нажатии этих клавиш.
+*	Исправлена документация для script_add (Windows+NVDA+c).
 
-## Изменения для 3.0 ##
-*	Braille representation of MathML objects can be added to the clipboard if
-  MathPlayer is installed.
-*	If no separator is set, just a single line will be placed between the
-  added text segments.
-*	A shortcut can be assigned to open the Clip Contents Designer settings
-  dialog.
-*	Added a check box in the settings dialog, for choosing if the separator
-  should be copied to be imported when reinstalling the add-on.
+## Изменения в версии 5.0 ##
 
-## Изменения для 2.0 ##
-*	Hindi characters can be used as the separator between added contents.
+*	Визуальное представление диалога было расширено, придерживаясь появления диалоговых окон, показанных в NVDA.
+*	Требуется NVDA 2016.4 или позднее.
 
-## Изменения для 1.0 ##
+## Изменения в версии 4.0 ##
+*	Настройки дополнения управляются из конфигурации NVDA, так что стандартные профили могут быть использованы для сохранения различных разделителей, и нет необходимости для копирования настроек для импорта при переустановке.
+*	Теперь можно выбрать, если добавленный текст будет добавлен или вырезан, используя добавление текста перед данными буфера обмена в диалоге настроек Clip Contents Designer.
+
+## Изменения в версии 3.0 ##
+*	Брайлевское представление объектов MathML могут быть добавлены в буфер обмена, если установлен MathPlayer.
+*	Если разделитель не задан, будет помещена только одна строка между добавленными текстовыми сегментами.
+*	Для открытия диалога настроек Clip Contents Designer может быть назначен ярлык.
+*	Добавлен флажок в диалоге настроек, для выбора, если разделитель должен быть скопирован и импортирован при переустановке дополнения.
+
+## Изменения в версии 2.0 ##
+*	Символы Hindi могут быть использованы в качестве разделителя между добавленным содержимым.
+
+## Изменения в версии 1.0 ##
 *	Первоначальная версия.
-
-[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=ccd
 
